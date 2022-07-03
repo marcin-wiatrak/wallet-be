@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node build/server.js",
     "build": "tsc -p .",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "devts": "ts-node src/server.ts"
   },
   "dependencies": {
     "@types/express": "^4.17.13",

@@ -1,11 +1,9 @@
 FROM node:15.8.0-alpine
-
-WORKDIR /app
-
-COPY . .
-
+WORKDIR /usr/src/app
+COPY package.json ./
 RUN npm install
-
+RUN npm install pm2 -g
 RUN npm run build
-
-RUN npm start
+COPY ./dist .
+EXPOSE 4000
+CMD ["pm2-runtime","server.js"]
