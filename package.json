@@ -8,7 +8,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.ts",
+    "start": "node ./build/server.js",
     "build": "tsc -p .",
     "dev": "nodemon ./src/server.ts"
   },
